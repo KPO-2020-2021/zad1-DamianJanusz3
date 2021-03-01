@@ -1,3 +1,6 @@
+//zadanie test1, należy przy kompilacji gcc dołączyć bibliotekę matematyczną (-lm). Dla kompilacji
+//w g++ nic nie trzeba robić i działa.
+
 #include <stdio.h>
 #include <math.h>
 

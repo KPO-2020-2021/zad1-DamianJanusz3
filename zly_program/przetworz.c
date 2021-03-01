@@ -1,3 +1,7 @@
+//w funkcji main trzeba było zamienić wskaźnik na char na stringa (pierwsza linijka maina)
+//wydaje mi się, że char* zawiera wskaźnik do miejsca w pamięci i ono jest modyfikowane przez 
+//felerną funkcję, a dla char[] operujemy już na zawartości czyli literach.
+
 #include <stdio.h>
 #include <ctype.h>
 
@@ -69,7 +73,7 @@ int RozmiarNajdluzszegoSlowa(char* Tekst)
 void ZamienNaPodkreslenie(char* Tekst)
 {
   for (; *Tekst; ++Tekst)
-      if (*Tekst == ' ') *Tekst = '_';
+      if ( *Tekst == ' ') *Tekst = '_';
 }
 
 
@@ -88,7 +92,7 @@ void ZamienNaPodkreslenie(char* Tekst)
  *  Wartosc zwracana:
  *    Ilosc malych liter.
  */
-int IloscMalychLiter(char *Tekst)
+int IloscMalychLiter(char* Tekst)
 {
   int Ilosc = 0;
   
@@ -112,7 +116,7 @@ int IloscMalychLiter(char *Tekst)
  *  Wartosc zwracana:
  *    Ilosc wielkich liter.
  */
-int IloscWielkichLiter(char *Tekst)
+int IloscWielkichLiter(char* Tekst)
 {
   int Ilosc = 0;
   
@@ -125,7 +129,8 @@ int IloscWielkichLiter(char *Tekst)
 
 int main()
 {
-  char *Napis = "Jak dobrze jest wstac skoro swit. Jutrzenki blask ...";
+  char Napis[] = "Jak dobrze jest wstac skoro swit. Jutrzenki blask ...";
+  
   int IloscSpacji;
   int DlugoscSlowaXXX;
   int IloscMaLiter = 0;

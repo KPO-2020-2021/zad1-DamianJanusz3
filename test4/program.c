@@ -1,7 +1,9 @@
+//po określeniu typu argumentów w funkcji dodaj program zaczyna działać poprawnie po kompilacji i konsolidacji z g++.
+
 #include <stdio.h>
 
 
-double Dodaj();
+double Dodaj(double, double);
 
 
 int main( )
